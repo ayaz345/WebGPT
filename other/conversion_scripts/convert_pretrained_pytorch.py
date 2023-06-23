@@ -6,8 +6,7 @@ from transformers import GPT2LMHeadModel
 
 def load_pretrained_gpt_model(model_type):
     print(f"Loading weights from pretrained GPT model: {model_type}")
-    model_hf = GPT2LMHeadModel.from_pretrained(model_type)
-    return model_hf
+    return GPT2LMHeadModel.from_pretrained(model_type)
 
 
 transposed = ['attn.c_attn.weight', 'attn.c_proj.weight',
